@@ -1,0 +1,84 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    padding-bottom: 0;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back {
+    padding: 1.37rem 1.65rem;
+    border-radius: 100px;
+    background-color: var(--colors__inside);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.back:hover {
+    opacity: 0.7;
+}
+
+.backIcon {
+    color: var(--colors__accent);
+}
+
+.heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--colors__white);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.headerBtns {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.notification {
+    padding: 1.2rem;
+    border-radius: 100px;
+    border: 1px solid var(--colors__border);
+    color: var(--colors__accent);
+    background-color: var(--colors__inside);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input {
+    all: unset;
+}
+
+.input::placeholder {
+    color: var(--colors__white);
+}
+
+.wrapper__input {
+    background-color: var(--colors__inside);
+    color: var(--colors__white);
+    border-radius: 15px;
+    padding: 12px 20px;
+    display: flex;
+    font-size: 14px;
+}
+
+.notification:hover,
+.profile:hover {
+    opacity: 0.7;
+}
