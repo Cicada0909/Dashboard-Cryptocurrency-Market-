@@ -1,1 +1,1 @@
-export const BINANCE_URL = "https://api.binance.com/";
+export const BINANCE_URL = "https://api.binance.com";

@@ -78,6 +78,10 @@
     font-size: 14px;
 }
 
+.btn__search {
+    cursor: pointer;
+}
+
 .notification:hover,
 .profile:hover {
     opacity: 0.7;

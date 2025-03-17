@@ -18,7 +18,7 @@ const Header = ({ heading, proccessBack }) => {
                         placeholder="Search"
                         className={styles.input}
                     />
-                    <Search width={20} />
+                    <Search width={20} className={styles.btn__search} />
                 </div>
 
                 <div className={styles.headerBtns}>
