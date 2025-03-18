@@ -1,0 +1,54 @@
+.container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 1fr 0.5fr;
+}
+
+.tokenName {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.symbol {
+    font-size: 1.2rem;
+}
+
+.fullName {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #9292c1;
+    display: flex;
+    justify-content: center;
+}
+
+.change {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.changeValue {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+}
+
+.changeIcon {
+    width: 1.2rem;
+}
+
+.up {
+    color: #00ff00;
+    transform: rotate(90deg);
+}
+
+.down {
+    color: #ff0000;
+    transform: rotate(-90deg);
+}

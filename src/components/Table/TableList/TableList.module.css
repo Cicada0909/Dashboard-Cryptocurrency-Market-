@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--colors__inside);
+    border-radius: 20px;
+    padding: 1.7rem 2.4rem 2.4rem;
+    max-width: 29%;
+}
+
+.heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.tableHeader {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 1fr 0.5fr;
+}
+
+.headerItem {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}

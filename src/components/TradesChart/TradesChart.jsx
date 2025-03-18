@@ -1,20 +1,19 @@
 import { useQuery } from '@tanstack/react-query'
 import React from 'react'
-import GetTradesApi from '../api/GetTrades/GetTrades'
+import GetTradesApi from '../../features/Trades/api/GetTrades/GetTrades'
 import { Line } from 'react-chartjs-2'
 import { CategoryScale } from 'chart.js'
 import Chart from 'chart.js/auto'
-import ChartItem from '../../../components/Chart/ChartItem'
-import main from '../../../assets/images/main.png'
+import ChartItem from '../Chart/ChartItem'
 
 import styles from './TradesChart.module.css'
 
 Chart.register(CategoryScale)
 
-const TradesChart = () => {
+const TradesChart = ({ symbol, size }) => {
     const { data: tradesData, isLoading: isTradesDataLoading } = useQuery({
-        queryKey: ['Trades'],
-        queryFn: GetTradesApi,
+        queryKey: ['Trades', symbol],
+        queryFn: () => GetTradesApi(symbol),
         refetchInterval: 10000,
     })
 
@@ -22,10 +21,11 @@ const TradesChart = () => {
         return 'Loading...'
     }
 
-    const prices = tradesData.map((item) => Number(item.price).toFixed(2))
-    const timestamps = tradesData.map((item) =>
-        new Date(item.time).toLocaleTimeString()
-    )
+    const prices =
+        tradesData?.map((item) => Number(item.price).toFixed(2)) || []
+    const timestamps =
+        tradesData?.map((item) => new Date(item.time).toLocaleTimeString()) ||
+        []
 
     const chartOptions = {
         responsive: true,
@@ -66,18 +66,7 @@ const TradesChart = () => {
         ],
     }
 
-    return (
-        <div>
-            <div className={styles.header}>
-                <img src={main} alt="main" className={styles.main} />
-                <ChartItem
-                    data={chartData}
-                    options={chartOptions}
-                    size="medium"
-                />
-            </div>
-        </div>
-    )
+    return <ChartItem data={chartData} options={chartOptions} size={size} />
 }
 
 export default TradesChart
