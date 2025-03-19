@@ -10,11 +10,11 @@
     border-radius: 25px;
     border: 0.2rem solid #625c6d;
     justify-content: center;
+    padding: 1rem;
 }
 
 .chart {
     padding: 2.5rem;
-    padding-top: 0;
 }
 
 .changeIcon {

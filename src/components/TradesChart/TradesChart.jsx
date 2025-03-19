@@ -40,7 +40,7 @@ const TradesChart = ({ symbol, size, lastPrice, priceChange, isSlider }) => {
             },
             y: {
                 ticks: {
-                    display: true,
+                    display: isSlider ? false : true,
                 },
                 grid: {
                     color: 'transparent',

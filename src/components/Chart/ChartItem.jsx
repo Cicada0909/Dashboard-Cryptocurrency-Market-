@@ -44,7 +44,7 @@ const ChartItem = ({
                                 )}
                             />
                             <span className={styles.changePercent}>
-                                {((priceChange / lastPrice) * 100).toFixed(1)}
+                                {((priceChange / lastPrice) * 100).toFixed(1)}%
                             </span>
                         </div>
                     </div>

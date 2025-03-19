@@ -1,17 +1,15 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./constants/router";
-import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-
-const queryCline = new QueryClient();
+import { RouterProvider } from 'react-router-dom'
+import router from './constants/router'
+import { Web3Provider } from './providers/Web3Provider'
 
 function App() {
-  return (
-    <>
-      <QueryClientProvider client={queryCline}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
-    </>
-  );
+    return (
+        <>
+            <Web3Provider>
+                <RouterProvider router={router} />
+            </Web3Provider>
+        </>
+    )
 }
 
-export default App;
+export default App
