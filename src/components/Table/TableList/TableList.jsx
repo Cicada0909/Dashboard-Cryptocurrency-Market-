@@ -9,6 +9,7 @@ const TableList = () => {
     const { data, isLoading } = useQuery({
         queryKey: ['changePrices'],
         queryFn: ChangePrice,
+        refetchInterval: 10000,
     })
 
     if (isLoading) {

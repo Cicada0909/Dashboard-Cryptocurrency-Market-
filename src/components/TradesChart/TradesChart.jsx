@@ -10,7 +10,7 @@ import styles from './TradesChart.module.css'
 
 Chart.register(CategoryScale)
 
-const TradesChart = ({ symbol, size }) => {
+const TradesChart = ({ symbol, size, lastPrice, priceChange, isSlider }) => {
     const { data: tradesData, isLoading: isTradesDataLoading } = useQuery({
         queryKey: ['Trades', symbol],
         queryFn: () => GetTradesApi(symbol),
@@ -66,7 +66,17 @@ const TradesChart = ({ symbol, size }) => {
         ],
     }
 
-    return <ChartItem data={chartData} options={chartOptions} size={size} />
+    return (
+        <ChartItem
+            data={chartData}
+            options={chartOptions}
+            size={size}
+            lastPrice={lastPrice}
+            priceChange={priceChange}
+            isSlider={isSlider}
+            symbol={symbol}
+        />
+    )
 }
 
 export default TradesChart

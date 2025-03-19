@@ -14,4 +14,54 @@
 
 .chart {
     padding: 2.5rem;
+    padding-top: 0;
+}
+
+.changeIcon {
+    width: 1.2rem;
+}
+
+.exchange {
+    width: 1.5rem;
+}
+
+.up {
+    color: #00ff00;
+    transform: rotate(0deg);
+}
+
+.down {
+    color: #ff0000;
+    transform: rotate(180deg);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 0 1.4rem;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.itemsChange {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.symbols {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.change {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
 }
