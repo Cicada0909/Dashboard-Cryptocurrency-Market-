@@ -4,8 +4,11 @@ import styles from './Sidebar.module.css'
 import { Link } from 'react-router-dom'
 import { LogOut } from 'lucide-react'
 import { sidebarData } from './Sidebar.data'
+import { useWeb3 } from '../../hooks/useWeb3/useWeb3'
 
 const Sidebar = () => {
+    const { disconnect } = useWeb3()
+
     return (
         <aside className={styles.aside}>
             <div className={styles.content}>
@@ -25,7 +28,7 @@ const Sidebar = () => {
             </div>
 
             <button className={styles.logout}>
-                <LogOut className={styles.icon} />
+                <LogOut className={styles.icon} onClick={disconnect} />
             </button>
         </aside>
     )

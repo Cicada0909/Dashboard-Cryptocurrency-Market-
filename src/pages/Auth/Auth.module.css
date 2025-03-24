@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 .btns {
@@ -28,7 +29,11 @@
 }
 
 .btn {
-    background-color:;
+    background: linear-gradient(
+        360deg,
+        rgb(135, 82, 233) 0%,
+        rgb(87, 27, 199) 100%
+    );
     border: 0;
     color: var(--colors__white);
     font-size: 1.4rem;

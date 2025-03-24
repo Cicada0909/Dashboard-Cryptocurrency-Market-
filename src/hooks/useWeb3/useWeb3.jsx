@@ -28,5 +28,7 @@ export const useWeb3 = () => {
         status,
         connectMetaMask: () => connect({ connector: metaMask() }),
         disconnect,
+        connectOKX: () => connect({ connector: okxWallet() }),
+        connectPhantom: () => connect({ connector: phantom() }),
     }
 }

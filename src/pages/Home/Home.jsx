@@ -13,16 +13,14 @@ const Home = () => {
 
     const navigate = useNavigate()
 
-    // useEffect(() => {
-    //     if (!address) {
-    //         navigate(PageRoutes.AUTH.LOGIN)
-    //     }
-    // }, [address, navigate])
+    useEffect(() => {
+        if (!address) {
+            navigate(PageRoutes.AUTH.LOGIN)
+        }
+    }, [address, navigate])
 
     return (
         <div className={styles.wrapper}>
-            {/* <button onClick={connectMetaMask}>conect</button>
-            <button onClick={disconnect}>disconnect</button> */}
             <div className={styles.header}>
                 <img src={main} alt="" />
                 <TradesChart symbol="BTCUSDT" size="medium" />
