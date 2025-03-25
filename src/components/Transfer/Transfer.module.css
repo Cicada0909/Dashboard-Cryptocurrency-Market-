@@ -1,0 +1,78 @@
+.selected {
+    color: rgb(121, 121, 218);
+}
+
+.wrapper {
+    max-width: 19%;
+    display: flex;
+    flex-direction: column;
+    background: #40394e;
+    border-radius: 25px;
+    padding: 2rem;
+    gap: 2.2rem;
+}
+
+.title {
+    font-size: 1.8rem;
+}
+
+.wrapper__input {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.amount {
+    font-size: 1.5rem;
+    color: #9080ba;
+}
+
+.btn__transfer {
+    all: unset;
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color: #bb7ff5;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.btn__transfer:hover {
+    background-color: #bc7ff5c3;
+}
+
+.input {
+    all: unset;
+    font-size: 2rem;
+    width: 50%;
+}
+
+.favorite__icon {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.favorite {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.iconAdd {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.iconAdd:hover,
+.favorite__icon:hover {
+    color: #a6a6a6;
+}
+
+.iconAdd:active {
+    transform: scale(0.8);
+}

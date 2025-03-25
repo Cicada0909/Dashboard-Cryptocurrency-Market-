@@ -16,12 +16,28 @@
 //     }
 // }
 
-import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import { parseEther } from 'viem'
+import {
+    useAccount,
+    useConnect,
+    useDisconnect,
+    useSendTransaction,
+} from 'wagmi'
 import { metaMask } from 'wagmi/connectors'
 export const useWeb3 = () => {
     const { address, isConnected, status } = useAccount()
     const { connect } = useConnect()
+
     const { disconnect } = useDisconnect()
+
+    const { sendTransaction } = useSendTransaction()
+
+    const sendETH = (to, amount) => {
+        if (!sendTransaction) return
+
+        sendTransaction({ to, value: parseEther(amount) })
+    }
+
     return {
         address,
         isConnected,
@@ -30,5 +46,6 @@ export const useWeb3 = () => {
         disconnect,
         connectOKX: () => connect({ connector: okxWallet() }),
         connectPhantom: () => connect({ connector: phantom() }),
+        sendETH,
     }
 }

@@ -7,6 +7,7 @@ import SliderChart from '../../components/SliderChart/SliderChart'
 import { useWeb3 } from '../../hooks/useWeb3/useWeb3'
 import { useNavigate } from 'react-router-dom'
 import { PageRoutes } from '../../constants/PageRoutes'
+import Transfer from '../../components/Transfer/Transfer'
 
 const Home = () => {
     const { address } = useWeb3()
@@ -26,7 +27,10 @@ const Home = () => {
                 <TradesChart symbol="BTCUSDT" size="medium" />
             </div>
             <SliderChart />
-            <TableList />
+            <div className={styles.items}>
+                <TableList />
+                <Transfer />
+            </div>
         </div>
     )
 }

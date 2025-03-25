@@ -12,3 +12,8 @@
 img {
     width: 50%;
 }
+
+.items {
+    display: flex;
+    gap: 2rem;
+}

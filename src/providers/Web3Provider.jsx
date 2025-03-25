@@ -4,7 +4,7 @@ import {
     RainbowKitProvider,
 } from '@rainbow-me/rainbowkit'
 import { createConfig, WagmiProvider } from 'wagmi'
-import { mainnet } from 'wagmi/chains'
+import { sepolia } from 'wagmi/chains'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { metaMaskWallet } from '@rainbow-me/rainbowkit/wallets'
 
@@ -21,7 +21,7 @@ const connectors = connectorsForWallets(
     }
 )
 const config = createConfig({
-    chains: [mainnet],
+    chains: [sepolia],
     connectors: connectors,
 })
 const queryClient = new QueryClient()
